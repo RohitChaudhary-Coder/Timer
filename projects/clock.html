@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="clock.css">
+    <script src="clock.js"></script>
+    <title>Document</title>
+</head>
+<body class="body row">
+    <div class="row" style="width: 100%;">
+        <div class="col-6">
+            <div id="clock_box">
+                <div class="main_contener" >
+                    <div class="haveing_time_contener"id="clock_time">
+                        <div class="row">
+                            <div style="width: 30px;margin-right: 55px;">
+                                <h4 style="color:aliceblue;" id="time"></h4>
+                            </div>
+                            <div style="width: 30px;margin-left: 15px;">
+                                <h4 style="color:aliceblue;" id="am-pm"></h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h6 style="color:aliceblue; margin-right:10px ;" id="date"></h6>
+                            <h6 style="color:aliceblue;" id="day"></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="region_btn row">
+                    <button class="btn btn-outline-primary region_btn" onclick="changeDateFormat('india')">India</button>
+                    <button class="btn btn-outline-primary region_btn" onclick="changeDateFormat('newyork')">New York</button>
+                    <button class="btn btn-outline-primary region_btn" onclick="changeDateFormat('us')">US</button>
+                    <button class="btn btn-outline-primary region_btn" onclick="changeDateFormat('uk')">UK</button>
+                </div>
+            </div>
+            <!-- <div style="background: rgb(210,20,29);background: radial-gradient(circle, rgba(210,20,29,1) 26%, rgba(231,105,15,1) 69%); height: 250px; padding: 5%;">
+                <div class="digital_clock_time" style=" background-color:aqua;" id="black_white">
+                    <div class="digital_clock_box row">
+                        <div class=" ">
+                            <h1 style="color:aliceblue;margin-right: 10px;" id="hours"></h6>
+                        </div>
+                        <div class="">
+                            <h1 style="color:aliceblue;margin-right: 10px;" id="minutes"></h6>
+                        </div>
+                        <div class="">
+                            <h1 style="color:aliceblue;margin-right: 10px;" id="seconds"></h6>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-info" onclick="change_theme('Black_White')" id="">To Get Red/Blue Theme</button>
+                </div>
+                <div class="digital_clock_time" style=" background-color:skyblue;" id="red__blue">
+                    <div class="digital_clock_box row">
+                        <div class=" ">
+                            <h1 style="color:red;margin-right: 10px;" id="hour"></h6>
+                        </div>
+                        <div class="">
+                            <h1 style="color:red;margin-right: 10px;" id="minute"></h6>
+                        </div>
+                        <div class="">
+                            <h1 style="color:red;margin-right: 10px;" id="second"></h6>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-primary" onclick="change_theme('red_blue')" id="">To Get Black/White Theme</button>
+                </div>
+            </div> -->
+        </div>
+        <div class="" style="width: 50%;" id="timer_box">
+            <div class="main_contener" id="main_contener_id">
+                <div class="haveing_time_contener"id="timer_time">
+                    <div>
+                        <h2 style="color:aliceblue;" id="timer_"></h2>
+                        <h2 id="p1">time out</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="width: 100%;display:flex;flex-direction: column;">
+                <div class="row">
+                    <input placeholder="Hours" id="Hours" class="btn btn-outline-primary timer_input_fildes">
+                    <input placeholder="Minutes" id="Minutes" class="btn btn-outline-primary timer_input_fildes">
+                    <input placeholder="Seconds" id="Seconds" class="btn btn-outline-primary timer_input_fildes">
+                </div>
+                <div>
+                    
+                </div>
+                <button onclick="set_timer_time()" id="start_btn" class="btn btn-outline-primary start_btn">Start</button>
+                <!-- <button onclick="start_stop_time('stop')" id="" class="btn btn-outline-primary">Stop</button> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

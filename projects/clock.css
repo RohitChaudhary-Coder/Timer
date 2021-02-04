@@ -1,0 +1,86 @@
+.main_contener{
+/*  width: 25%;
+    height: 25%; */
+    /* border-radius:50%;
+    border-color: rgb(27, 178, 192);
+    background-color: rgba(0, 0, 0, 0.835); */
+    /* align-items: center; */
+    width: 250px;
+    height:250px;
+    background-color:aqua;
+    border-radius: 50%;
+    padding:10px;
+    margin-bottom: 25px;
+    /* margin: auto; */
+}
+#clock_box{
+    position: fixed;
+    left: 10%;
+    top: 30px;
+}
+#timer_box{
+    position: fixed;
+    left: 60%;
+    top: 30px;
+}
+#p1{
+    visibility: hidden;
+    color: #5FC3E4;
+}
+
+.start_btn{
+    width:275px;
+    margin: 5px;
+    margin-left:-13px ;
+}
+.region_btn{
+width: 100%;
+margin: 2px;
+}
+.timer_input_fildes{
+    width:89px;
+    margin: 2px;
+}
+.first_contener{
+    width:100%;
+    height: 100%;
+}
+.haveing_time_contener{
+    align-items: baseline;
+    width:230px;
+    height:230px;
+    background-color: rgba(22, 4, 4, 0.945);
+    border-radius: 50%;
+    padding-top: 30%;
+    padding-left: 25%;
+    
+}
+.body{
+    padding: 20px;
+    background-color: rgb(51, 49, 61);
+}
+.digital_clock_time{
+    text-align: center;
+    /* border-radius: 50%; */
+    margin: auto;
+    width: 270px;
+    height:100px;
+    padding:1px;
+
+}
+.digital_clock_box{
+    background-color: rgba(22, 4, 4, 0.945);
+    padding:5%;
+    margin: 10px;
+    width: 250px;
+    height:80px;
+    border-color: #fff;
+}
+#red__blue{
+    display :none;
+
+}
+.digital_clock_box_two{
+    background: -webkit-linear-gradient(to right, #5FC3E4, #E55D87);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

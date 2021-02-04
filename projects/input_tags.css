@@ -1,0 +1,13 @@
+.small_div{
+    background: rgb(2,0,36);
+    margin: 5%;
+    width: 250px;
+    height: 250px;
+}
+.btn{
+}
+.body{
+    background: rgb(210,20,29);
+    background: radial-gradient(circle, rgba(210,20,29,1) 26%, rgba(231,105,15,1) 69%);
+  
+}
