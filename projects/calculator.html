@@ -7,49 +7,48 @@
     <link rel="stylesheet" href="calculator_first.css">
 </head>
 <body class="body">
-    <div class="maidiv">
-        <div class="navbar"> 
-            <input type="text"placeholder="" value="0"id="screen" class="screen" value="0">    
+    <div class="maindiv">
+        <div> 
+            <input type="text" placeholder="0" id="screen" class="screen" value="">    
         </div>
         <div  class="row">
-            <button type="submit" onclick="sow_in_screen('CE')"  class="br bgcolor font-weight normal_btn">CE</button>
-            <button type="submit" onclick="sow_in_screen('*')"  class="br bgcolor font-weight normal_btn">*</button>
-            <button type="submit" onclick="sow_in_screen('/')"  class="br bgcolor font-weight normal_btn">/</button>
-            <button type="submit" onclick="sow_in_screen('-')"  class="br bgcolor font-weight normal_btn">-</button>
-            
+            <button type="button" onclick="sow_in_screen('CE')"  class="br bgcolor font-weight normal_btn">CE</button>
+            <button type="button" onclick="sow_in_screen('/')"  class="br bgcolor font-weight normal_btn">/</button>
+            <button type="button" onclick="sow_in_screen('*')"  class="br bgcolor font-weight normal_btn">*</button>
+            <button type="button" onclick="sow_in_screen('-')"  class="br bgcolor font-weight normal_btn">-</button>
         </div>
         <div class="row">
             <div class="col">
-                <button type="submit" onclick="sow_in_screen(7)"   class="br  font-weight normal_btn">7</button>
-                <button type="submit" onclick="sow_in_screen(4)"  class="br  font-weight normal_btn">4</button>
+                <button type="button" onclick="sow_in_screen(7)"   class="br font-weight normal_btn">7</button>
+                <button type="button" onclick="sow_in_screen(4)"  class="br font-weight normal_btn">4</button>
             </div>
             <div class="col">
-                <button type="submit" onclick="sow_in_screen(8)"  class="br  font-weight normal_btn">8</button>
-                <button type="submit" onclick="sow_in_screen(5)"  class="br  font-weight normal_btn">5</button>
+                <button type="button" onclick="sow_in_screen(8)"  class="br font-weight normal_btn">8</button>
+                <button type="button" onclick="sow_in_screen(5)"  class="br font-weight normal_btn">5</button>
             </div>
             <div class="col">
-                <button type="submit" onclick="sow_in_screen(9)"  class="br  font-weight normal_btn">9</button>
-                <button type="submit" onclick="sow_in_screen(6)"  class="br  font-weight normal_btn">6</button>        
+                <button type="button" onclick="sow_in_screen(9)"  class="br font-weight normal_btn">9</button>
+                <button type="button" onclick="sow_in_screen(6)"  class="br font-weight normal_btn">6</button>        
             </div>
             <div >
-                <button type="submit" onclick="sow_in_screen('+')"  class="br bgcolor font-weight equals_to">+</button>
+                <button type="button" onclick="sow_in_screen('+')"  class="br bgcolor font-weight equals_to">+</button>
                 
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <div class="row">
-                    <button type="submit" onclick="sow_in_screen(1)"  class="br  font-weight normal_btn">1</button>
-                    <button type="submit" onclick="sow_in_screen(2)"  class="br  font-weight normal_btn">2</button>
+                    <button type="button" onclick="sow_in_screen(1)"  class="br font-weight normal_btn">1</button>
+                    <button type="button" onclick="sow_in_screen(2)"  class="br font-weight normal_btn">2</button>
                 </div>
-                <button type="submit" onclick="sow_in_screen(0)"  class="br  font-weight a zero_class">0</button>
+                <button type="button" onclick="sow_in_screen(0)"  class="br font-weight zero_class">0</button>
             </div>
             <div class="col">
-                <button type="submit" onclick="sow_in_screen(3)"  class="br  font-weight normal_btn">3</button>
-                <button type="submit" onclick="sow_in_screen('.')"  class="br  font-weight normal_btn">.</button>
+                <button type="button" onclick="sow_in_screen(3)"  class="br font-weight normal_btn">3</button>
+                <button type="button" onclick="sow_in_screen('.')"  class="br font-weight normal_btn">.</button>
             </div>
             <div>
-                <button type="submit" onclick="return_value()"  class="br col3 font-weight equals_to">=</button>   
+                <button type="submit" onclick="return_value()"  class="br font-weight equals_to">=</button>   
             </div>
         </div>
     </div>

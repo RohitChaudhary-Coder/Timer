@@ -1,4 +1,6 @@
 var region = "india";
+var timerInterval = 0;
+var timerID = null;
 setInterval(setDateTime, 1000);
 
 //Sets date and time -Clock
@@ -8,10 +10,13 @@ function setDateTime(){
     document.getElementById("am-pm").innerHTML = dateTime.new_am_pm;
     document.getElementById("date").innerHTML = dateTime.date;
     document.getElementById("day").innerHTML = dateTime.day;
-    $("#clock_time").css({boxShadow: "0px 0px 15px 15px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"});
-    setTimeout(function(){
-        $("#clock_time").css({boxShadow: "0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"});
-    }, 100)
+    document.getElementById("digital_clock_timer").innerHTML = dateTime.time;
+
+    
+    // $("#clock_time").css({boxShadow: "0px 0px 15px 15px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"});
+    // setTimeout(function(){
+    //     $("#clock_time").css({boxShadow: "0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"});
+    // }, 100)
 
 }
 
@@ -79,54 +84,90 @@ function changeDateFormat(New_region){
     region = New_region;
 }
 
-
-
 // timer============timer============timer============timer============timer============timer============timer============
-function set_timer_time(){
-    let time =return_given_time();
-    total_time = time.total_time_in_seconds
-    setInterval(change_time,1000)
-function change_time(){
-    if (total_time >0){
-        total_time =total_time -1
-        document.getElementById("timer_").innerHTML=total_time 
-        $("#clock_time").css({boxShadow: "0px 0px 15px 15px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"});
+
+// start Timer
+function startTimer(){
+    $("#new_timer_time").show(500)
+    $("#showing_time_out").hide(1000);
+    $("#main_contener_id").css({"background-color": "aqua"});  
+    $(".timer_input_fildes").hide(1000);
+    $("#start_btn").hide(1000);
+    $("#stop_btn").show(1000);
+    timerInterval = getTimerInterval();
+    timerID = setInterval(UpdateTimerInterval, 1000);  
+}
+// stop timer
+function stopTimer(){
+    clearInterval(timerID);
+    $("#stop_btn").hide();
+    $(".timer_input_fildes").show();
+    $("#start_btn").show();
+}
+// get time hear
+function getTimerInterval(){
+    let hours = document.getElementById("Hours").value;
+    let minutes = document.getElementById("Minutes").value;
+    let seconds = document.getElementById("Seconds").value;
+    return (hours * 60 * 60 ) + (minutes * 60) + seconds;
+}
+// update timer hear
+// setInterval(UpdateTimerInterval,1000);
+function UpdateTimerInterval(){
+    // if(hours < 9 )
+    // timerstring = ``;
+    // $("#timer").html(timestring);
+    if(timerInterval){
+        $("#main_contener_id").css({boxShadow: "0px 0px 15px 15px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"});
         setTimeout(function(){
-            $("#clock_time").css({boxShadow: "0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"});
+            $("#main_contener_id").css({boxShadow: "0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"});
         }, 100)
-    }
-    else{
-        $("#main_contener_id").css({"background-color": "red"});
-        $("#timer_").hide(1000);
-        $("#p1").show(2000);
-    }
-}
-}
+        timerInterval = timerInterval-1;
+        
+        remain_hours=parseInt(timerInterval / 3600)
+        remendar =parseInt(timerInterval % 3600)
+        remain_miniuts=parseInt(remendar / 60)
+        remain_second=parseInt(timerInterval % 60)
 
-function return_given_time(){
-    get_hours = document.getElementById("Hours").value
-    get_minutes = document.getElementById("Minutes").value
-    get_seconds = document.getElementById("Seconds").value
-    total_seconds = `${(get_hours * 60 * 60 ) + (get_minutes * 60) + get_seconds}`
-    return{
-        seconds:get_seconds,
-        minutes:get_minutes,
-        hours:get_hours,
-        total_time_in_seconds: `${total_seconds}`
-    }
-}
+        if(remain_hours < 10){
+            remain_hours = "0" + remain_hours;
+        }
+        if(remain_miniuts < 10){
+            remain_miniuts = "0" + remain_miniuts;
+        }
+        if(remain_second < 10){
+            remain_second = "0" + remain_second;
+        }
 
-function start_stop_time(){
-    make_milliseconds = (1000 * get_seconds) + (1000 * 60 * get_minutes) + (1000 * 60 * 60 * get_hours);
-}
+        document.getElementById("hour").innerHTML = remain_hours;
+        document.getElementById("second").innerHTML = remain_second;
+        document.getElementById("minute").innerHTML = remain_miniuts;
+        // console.log(timerInterval ,'timerInterval');
+        // console.log(timerID,'id')
+    }else{
+        // $("#haveing_time_time").hide(1000)
+        // $("#showing_time_out").show(2000);
+        // console.log("elses")
 
-function change_theme(parameter) {
-    if (parameter === "Black_White") {
-        red__blue.style.display = "block";
-        black_white.style.display = "none";
-    }
-    else if (parameter === "red_blue") {
-        black_white.style.display = "block";
-        red__blue.style.display = "none";
+        $("#main_contener_id").css({"background-color": "red"});  
+        stopTimer();      
     }
 }
+// function set_timer_time(work){
+//     if (work === "start"){
+//         $("#start_btn").hide(1000);
+//         $(".timer_input_fildes").hide(1000);
+//         $("#stop_btn").show(1000);
+//         $("#p1").show(1000);
+//         set_setInterval=setInterval(UpdateTimerInterval, 1000)
+//         let time =return_given_time();
+//         total_time = time.total_time_in_seconds    
+//     }
+//     else{
+//         $("#stop_btn").hide(1000);
+//         $(".timer_input_fildes").show(1000);
+//         $("#start_btn").show(1000);
+//         clearInterval(set_setInterval);
+//     }
+
+// }

@@ -37,3 +37,16 @@ function return_text(){
     in ${classs} class 
     `; 
 }
+
+
+
+
+if (values){new_valuess=parameter
+    document.getElementById("screen").value=new_valuess
+    console.log("values")
+}
+
+else if(values>0){        new_valuess=values+parameter
+    document.getElementById("screen").value=new_valuesss
+    console.log("values00000000000000000000")
+}

@@ -1,0 +1,75 @@
+.row{
+    display: flex;
+    flex-direction:row ;
+}
+.col{
+    display: flex;
+    flex-direction:column;
+}
+.text{
+    text-align: center;
+}
+.screen_class{
+    width: 98%;
+    height: 50px;
+    margin: 10px;
+}
+.zero_class{
+    text-align: center;
+
+    margin:1%;
+    width:  150px;
+}
+.equls_to_class{
+    margin-top :10px ;
+    width: 145px;
+    height:80px;
+}
+.num_button{
+    text-align: center;
+
+    width: 137px;
+    margin-left:25px;
+}
+.add_class{
+    margin-top:5px;
+
+    height: 85px;
+    width: 135px;
+}
+.background_color_body{
+    background: rgb(210,20,29);
+    background: radial-gradient(circle, rgba(210,20,29,1) 26%, rgba(231,105,15,1) 69%);
+    padding:20%;
+}
+.background_color_maindiv{
+    background: rgb(2,0,36);
+}
+.num1_button{
+    text-align: center;
+    width: 140px;
+    margin-right:-25px;
+    margin-top:5px ; 
+    margin-bottom:5px ; 
+
+}
+.num2_button{
+    text-align: center;
+    width: 143px;
+    margin-left:15px;
+    margin:5px ; 
+    margin-bottom:5px ; 
+
+}
+.main_div{
+    width: 100%;
+    margin-left:15px ;
+
+}
+.main1_div{
+    margin-left:7px ;
+
+}
+.button_div{
+    width: 70%;
+}
