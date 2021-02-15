@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="timer.css">
+    <script src="timer.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body class="body">
+    <div class="main-container">
+        <div class="outer-container">
+            <div id="inner-container">
+                <div class="row" id="time">
+                    <h1 class="numbers-style" id="hour">00</h1>
+                    <h1 class="numbers-style"> : </h1>
+                    <h1 class="numbers-style" id="minute">00</h1>
+                    <h1 class="numbers-style"> : </h1>
+                    <h1 class="numbers-style" id="second">00</h1>
+                </div>
+                <h1 id="show-time-out">time out</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row time-container">
+                <input placeholder="Hours" id="Hours" class="input-fields">
+                <input placeholder="Minutes" id="Minutes"class="input-fields">
+                <input placeholder="Seconds" id="Seconds" class="input-fields">
+            </div>
+            <div class="timer-btn">
+                <button onclick="startTimer()" id="start-btn" class="btn btn-outline-info button">Start</button>
+                <button onclick="stopTimer()" id="stop-btn" class="btn btn-outline-info button">Stop</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
